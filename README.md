@@ -14,9 +14,7 @@ Un système web interactif de prédiction d'exoplanètes utilisant l'apprentissa
 - [Installation](#-installation)
 - [Utilisation](#-utilisation)
 - [Architecture](#-architecture)
-- [API](#-api)
 - [Modèle ML](#-modèle-ml)
-- [Structure du projet](#-structure-du-projet)
 - [Contribution](#-contribution)
 
 ## Vue d'ensemble
