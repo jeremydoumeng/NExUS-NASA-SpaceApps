@@ -46,7 +46,7 @@ Démocratiser la recherche d'exoplanètes en permettant aux utilisateurs de :
 - **Vue orbitale** avec contrôles caméra
 
 
-### 🗄️ Base de données
+### Base de données
 - **12,656 exoplanètes** confirmées chargées depuis CSV
 - **Changement automatique** toutes les 30 secondes
 - **Informations détaillées** sur chaque système planétaire
@@ -199,28 +199,28 @@ Liste des champs attendus
 - Paramètres planétaires (rayon, température d'équilibre)
 - Coordonnées astronomiques (RA, DEC)
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 spaceappshtml3/
-├── 📄 index.html              # Page principale avec visualisation
-├── 📄 predict.html            # Page de prédiction
-├── 📄 styles.css              # Styles pour index.html
-├── 📄 styles2.css             # Styles pour predict.html
-├── 📄 script.js               # Logique principale
-├── 📄 webgl3d.js              # Moteur 3D WebGL
-├── 📄 requirements.txt        # Dépendances Python
-├── 📄 README.md               # Documentation
-├── 📁 folder/                 # Backend ML
-│   ├── 📄 api.py              # API Flask
-│   ├── 📄 predict.py          # Module de prédiction
-│   └── 📁 autogluon_exoplanets/  # Modèle entraîné
-│       ├── 📄 predictor.pkl   # Prédicteur principal
-│       ├── 📄 learner.pkl     # Apprenant
-│       └── 📁 models/         # Modèles individuels
-├── 📁 src/
-│   └── 📄 exoplanets_unified.csv  # Base de données
-└── 📄 galaxie.jpeg            # Image de fond
+├──  index.html              # Page principale avec visualisation
+├──  predict.html            # Page de prédiction
+├──  styles.css              # Styles pour index.html
+├──  styles2.css             # Styles pour predict.html
+├──  script.js               # Logique principale
+├──  webgl3d.js              # Moteur 3D WebGL
+├──  requirements.txt        # Dépendances Python
+├──  README.md               # Documentation
+├──  folder/                 # Backend ML
+│   ├──  api.py              # API Flask
+│   ├──  predict.py          # Module de prédiction
+│   └──  autogluon_exoplanets/  # Modèle entraîné
+│       ├──  predictor.pkl   # Prédicteur principal
+│       ├──  learner.pkl     # Apprenant
+│       └──  models/         # Modèles individuels
+├──  src/
+│   └──  exoplanets_unified.csv  # Base de données
+└──  galaxie.jpeg            # Image de fond
 ```
 
 ## Développement
