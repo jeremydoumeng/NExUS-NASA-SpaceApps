@@ -174,7 +174,7 @@ Vérification de l'état de l'API
 #### `GET /api/fields`
 Liste des champs attendus
 
-## 🤖 Modèle ML
+## Modèle ML
 
 ### Architecture AutoGluon
 - **8 algorithmes** en ensemble :
