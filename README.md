@@ -139,41 +139,6 @@ open index.html  # macOS
 - **Modèle AutoGluon** : Ensemble de 8 algorithmes ML
 - **Base de données** : CSV avec exoplanètes confirmées
 
-## API
-
-### Endpoints disponibles
-
-#### `POST /api/predict`
-Prédiction d'exoplanète
-
-**Paramètres :**
-```json
-{
-  "mission": "kepler",
-  "period_days": 3.52,
-  "depth_ppm": 15000,
-  "t_mag": 12.1,
-  "threshold": 0.436
-}
-```
-
-**Réponse :**
-```json
-{
-  "success": true,
-  "prediction": {
-    "decision": "Planète/PC"
-  },
-  "input_data": { ... }
-}
-```
-
-#### `GET /api/health`
-Vérification de l'état de l'API
-
-#### `GET /api/fields`
-Liste des champs attendus
-
 ## Modèle ML
 
 ### Architecture AutoGluon
@@ -199,44 +164,8 @@ Liste des champs attendus
 - Paramètres planétaires (rayon, température d'équilibre)
 - Coordonnées astronomiques (RA, DEC)
 
-##  Structure du projet
-
-```
-spaceappshtml3/
-├──  index.html              # Page principale avec visualisation
-├──  predict.html            # Page de prédiction
-├──  styles.css              # Styles pour index.html
-├──  styles2.css             # Styles pour predict.html
-├──  script.js               # Logique principale
-├──  webgl3d.js              # Moteur 3D WebGL
-├──  requirements.txt        # Dépendances Python
-├──  README.md               # Documentation
-├──  folder/                 # Backend ML
-│   ├──  api.py              # API Flask
-│   ├──  predict.py          # Module de prédiction
-│   └──  autogluon_exoplanets/  # Modèle entraîné
-│       ├──  predictor.pkl   # Prédicteur principal
-│       ├──  learner.pkl     # Apprenant
-│       └──  models/         # Modèles individuels
-├──  src/
-│   └──  exoplanets_unified.csv  # Base de données
-└──  galaxie.jpeg            # Image de fond
-```
 
 ## Développement
-
-### Ajouter de nouveaux exemples
-Modifiez la section `examples` dans `predict.html` :
-
-```javascript
-const examples = {
-    nouveau_exemple: {
-        mission: "tess",
-        period_days: 10.5,
-        // ... autres paramètres
-    }
-};
-```
 
 ### Modifier le seuil par défaut
 Dans `folder/predict.py` :
@@ -255,16 +184,6 @@ DEFAULT_THRESHOLD = 0.436  # Votre nouveau seuil
 2. **WSGI** (gunicorn) pour l'API Flask
 3. **Base de données** PostgreSQL/MySQL pour les logs
 
-### Docker (optionnel)
-```dockerfile
-FROM python:3.9-slim
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD ["python", "folder/api.py"]
-```
-
 ## Contribution
 
 1. **Fork** le projet
@@ -272,10 +191,6 @@ CMD ["python", "folder/api.py"]
 3. **Commit** vos changements (`git commit -m 'Ajouter nouvelle fonctionnalité'`)
 4. **Push** vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
 5. **Ouvrir** une Pull Request
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## Remerciements
 
